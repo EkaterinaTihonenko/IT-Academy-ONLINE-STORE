@@ -1,8 +1,8 @@
 export class Component extends HTMLElement {
   constructor() {
     super();
-    this.props = {};
     this.state = {};
+    this.props = {};
   }
 
   setState(callback) {
@@ -27,7 +27,7 @@ export class Component extends HTMLElement {
   }
 
   componentDidMount() {}
-  componentWilUnmount() {}
+  componentWillUnmount() {}
   componentWillUpdate() {}
   render() {}
 }
