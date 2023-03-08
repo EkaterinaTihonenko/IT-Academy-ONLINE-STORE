@@ -12,3 +12,15 @@
    grid-template-rows: max-content 1fr 60px;
    min-height: calc(100vh - 60px);
 }
+
+.card-body{
+   justify-content: space-between;
+   display: flex;
+   flex-direction: column;
+   min-height: 330px;
+}
+
+.container h5{
+  min-height: 50px;
+}
+
