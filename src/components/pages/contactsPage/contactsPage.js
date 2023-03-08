@@ -3,8 +3,8 @@ import { Component } from '../../../core/Component';
 class contactsPage extends Component {
   render() {
     return `
-         <h1>contactsPage</h1>
-      `;
+        <h1>contactsPage</h1>;
+    `;
   }
 }
 

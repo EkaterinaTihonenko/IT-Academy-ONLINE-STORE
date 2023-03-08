@@ -1,5 +1,7 @@
 import { Component } from './core/Component';
 import { routes } from './constants/routes';
+import { appCategories } from './constants/appCategiries';
+import './components/molecules/Footer';
 import './components/templates/Header';
 import './components/pages/BlogPage';
 import './components/pages/cartPage';
@@ -14,14 +16,17 @@ class App extends Component {
 
     return `
       <div class="main-layout">
-         <it-header></it-header>
+         <it-header categories='${JSON.stringify(appCategories)}'></it-header>
          <main>
-            <hr class="dropdown-divider" />
             ${
               routes.find((route) => route.href === pathname)?.component ??
               '<error-page></error-page>'
             }
+            </div>
          </main>
+         <div class="container">
+            <it-footer></it-footer>
+         </div>   
       </div>
    `;
   }
