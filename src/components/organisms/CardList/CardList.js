@@ -23,7 +23,7 @@ class CardList extends Component {
                </div>
                `;
            })
-           .join('')}
+           .join(' ')}
          </div>
          `;
   }

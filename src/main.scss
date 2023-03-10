@@ -1,9 +1,9 @@
 @import 'reset.css';
 @import 'bootstrap';
 
+
 .image-fit {
    width: 100%;
-   height: 200px;
    object-fit: contain;
 }
  
@@ -12,15 +12,3 @@
    grid-template-rows: max-content 1fr 60px;
    min-height: calc(100vh - 60px);
 }
-
-.card-body{
-   justify-content: space-between;
-   display: flex;
-   flex-direction: column;
-   min-height: 330px;
-}
-
-.container h5{
-  min-height: 50px;
-}
-
