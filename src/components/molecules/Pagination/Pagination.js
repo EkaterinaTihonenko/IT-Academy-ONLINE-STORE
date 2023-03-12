@@ -3,6 +3,14 @@ import { Component } from '../../../core/Component';
 import { eventEmmiter } from '../../../core/EventEmmiter';
 
 class Pagination extends Component {
+  /*
+   constructor() {
+    super();
+    this.state = {
+      count: 0,
+    };
+  }
+*/
   static get observedAttributes() {
     return ['total', 'limit', 'current'];
   }
@@ -35,11 +43,11 @@ class Pagination extends Component {
     const count = new Array(Math.ceil(total / limit)).fill(null);
 
     const isFirst = Number(current) === +1;
-    const isLast = Number(current) === -1;
+    const isLast = Number(current) === count.length;
 
     return `
          <ul class="pagination">
-            <li class="page-item  ${isLast ? 'disabled' : ''}">
+            <li class="page-item  ${isFirst ? 'disabled' : ''}">
                <a class="page-link previous-link" 
                   href="#">
                      Предыдущая
@@ -60,7 +68,7 @@ class Pagination extends Component {
                   `;
               })
               .join(' ')}
-            <li class="page-item ${isFirst ? 'disabled' : ''}">
+            <li class="page-item ${isLast ? 'disabled' : ''}">
               <a class="page-link next-link" 
                  href="#">
                      Следующая</a>
