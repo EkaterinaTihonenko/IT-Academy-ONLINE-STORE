@@ -3,14 +3,6 @@ import { Component } from '../../../core/Component';
 import { eventEmmiter } from '../../../core/EventEmmiter';
 
 class Pagination extends Component {
-  /*
-   constructor() {
-    super();
-    this.state = {
-      count: 0,
-    };
-  }
-*/
   static get observedAttributes() {
     return ['total', 'limit', 'current'];
   }
